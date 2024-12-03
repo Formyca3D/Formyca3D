@@ -217,4 +217,41 @@ body {
   footer .social-media a:hover {
     text-decoration: underline;
   }
-  
+  /* Diseño general para pantallas grandes (por defecto) */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .social-media a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  /* Diseño para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    header {
+      font-size: 1.2em; /* Reduce el tamaño de fuente */
+      padding: 10px; /* Reduce el espaciado */
+    }
+
+    .container {
+      padding: 10px; /* Agrega márgenes en móviles */
+    }
+
+    .social-media a {
+      display: block; /* Coloca los enlaces de redes sociales en líneas separadas */
+      margin: 5px 0;
+    }
+  }
