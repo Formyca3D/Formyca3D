@@ -4,6 +4,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  background-color: #f4f4f4; /* Fondo general */
 }
 
 header {
@@ -13,6 +14,7 @@ header {
 
 h1 {
   margin: 0;
+  color: #333;
 }
 
 .container {
@@ -24,7 +26,7 @@ h1 {
 /* Galería de imágenes */
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila en pantallas grandes */
+  grid-template-columns: repeat(2, 1fr); /* Dos imágenes por fila */
   gap: 20px; /* Espacio entre imágenes */
 }
 
@@ -44,12 +46,18 @@ h1 {
 /* Diseño responsivo para móviles */
 @media (max-width: 768px) {
   .image-gallery {
-    grid-template-columns: 1fr; /* Una imagen por fila en móviles */
+    grid-template-columns: 1fr; /* Una imagen por fila */
   }
 
   .image-gallery img {
-    border-radius: 5px; /* Menos redondeado en móviles */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    border-radius: 10px; /* Conserva las esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantiene la misma sombra */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .image-gallery img:hover {
+    transform: scale(1.05); /* Conserva el efecto hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Mantiene la sombra al ampliar */
   }
 }
 
